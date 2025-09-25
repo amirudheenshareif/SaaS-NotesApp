@@ -44,7 +44,7 @@ useEffect(() => {
       setIsModalOpen(true);
       //create note only if updateStatus is false
       if(!updateStatus){
-        const response = await axios.post("http://localhost:3000/notes/",{
+        const response = await axios.post("https://saas-notes-app-abav.onrender.com/notes/",{
           title,
           content,
           userId,
@@ -60,7 +60,7 @@ useEffect(() => {
     }
       //update note only if updateStatus is true
       else{
-        const response = await axios.put(`http://localhost:3000/notes/${updateNoteId}`,{
+        const response = await axios.put(`https://saas-notes-app-abav.onrender.com/notes/${updateNoteId}`,{
           title,
           content,
        },{
@@ -80,7 +80,7 @@ useEffect(() => {
     //Upgrading Notes
     const handleUpgrade = async () => {
     try {
-       const response = await axios.get("http://localhost:3000/notes/", {
+       const response = await axios.get("https://saas-notes-app-abav.onrender.com/notes/", {
           params: { role, userId, tenantId },
           headers: { Authorization: `Bearer ${token}` }
          });
@@ -95,7 +95,7 @@ useEffect(() => {
     //Fetching Notes
     const getNotes = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/notes/", {
+        const response = await axios.get("https://saas-notes-app-abav.onrender.com/notes/", {
           params: { role, userId, tenantId },
           headers: { Authorization: `Bearer ${token}` }
         });
@@ -110,7 +110,7 @@ useEffect(() => {
  //Deleting Notes
    const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/notes/${id}`, {
+      const response = await axios.delete(`https://saas-notes-app-abav.onrender.com/notes/${id}`, {
             params:{tenantId},
             headers: { Authorization: `Bearer ${token}` }
             });
