@@ -12,6 +12,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(urlencoded(true));
+app.get('/health', (req, res) => {
+    res.json({ status: 'ok' });
+});
 app.use("/notes",authMiddleWare, notesRouter)
 app.post("/login",loginController);
 app.post("/upgrade",authMiddleWare, upgradePlan);
