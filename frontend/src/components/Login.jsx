@@ -48,7 +48,7 @@ export const Login = () => {
                            theme: "light",
                            transition: Zoom,
                            });
-          const response = await axios.post("http://localhost:3000/login", formData);
+          const response = await axios.post("https://saas-notes-app-abav.onrender.com/login", formData);
           toast.dismiss(toastStatus);
 
           token = localStorage.setItem("token", response.data.token);
