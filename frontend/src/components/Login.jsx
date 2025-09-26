@@ -105,13 +105,13 @@ export const Login = () => {
     </div>
 
        <form className='w-full flex flex-col gap-4' onSubmit={handleLogin}>
-        <div className='w-full text-gray-700 flex flex-col gap-1'>
+        <div className='w-full text-white flex flex-col gap-1'>
             <Label>Email</Label>
             <Input className='w-full' type='email' name='email' value={formData.email}  onChange={handleFomChange}/>
         </div>
 
     <div className="mb-4">
-       <Label className={invalidPassword ? "text-red-500" : "text-gray-700"}>
+       <Label className={invalidPassword ? "text-red-500" : "text-white"}>
         {invalidPassword ? "Invalid Password" : "Password"}
       </Label>
       <Input
