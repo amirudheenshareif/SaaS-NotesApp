@@ -38,7 +38,6 @@ export const Header = () => {
         </div>
 
        <div className='flex gap-4'>
-        {/* <Button className="px-3 sm:px-5 py-1 sm:py-2 rounded-xl border border-green-600 text-green-600 hover:bg-blue-50 font-medium transition" variant='outline'>Login</Button> */}
         {(isSignedIn) ? (
           <Button 
           onClick={handleLogout}
