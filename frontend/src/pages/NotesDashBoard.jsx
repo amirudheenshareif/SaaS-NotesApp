@@ -23,6 +23,8 @@ export const NotesDashBoard = () => {
     const[title,setTitle] = useState("");
     const[content,setContent] = useState("");
 
+    //This is for branch testing
+
 
 useEffect(() => {
   console.log(localStorage);
